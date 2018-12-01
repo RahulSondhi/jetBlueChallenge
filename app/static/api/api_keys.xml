@@ -1,0 +1,7 @@
+<resources>
+  <!-- HERE.com -->
+  <string name="here_app_id">OGaXEuWf2KF5BBvfQLQM</string>
+  <string name="here_app_code">9X6U1gQ4wxSSALZZZSZavA</string>
+  <!-- Yelp Fusion -->
+  <string name="yelp_api_key">d89hTPDkgD-k3oMW4bh3BahJ_3ZRsz25NQPio-cgDMM6G2U2966jLDLe485aEbDMuZ9uOibRubwehn0_CdMRR5XhyhkbDLkWhxqNIehxTvv7v80OBwzoxWEpsuMCXHYx</string>
+</resources>
