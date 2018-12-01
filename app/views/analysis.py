@@ -9,8 +9,10 @@ from app import app
 # REST Api URL's
 HERE_COM_URL = 'https://places.api.here.com/places/v1/discover/explore';
 YELP_URL = 'https://api.yelp.com/v3/businesses/search';
-CURRENT_DIRECTORY = pathlib.Path(__file__).absolute();
-KEY_FILE_PATH = CURRENT_DIRECTORY.parents[1].joinpath(pathlib.Path('static/api/api_keys.xml'));
+CURRENT_DIRECTORY = pathlib.Path(__file__).absolute().parent;
+KEY_FILE_PATH = CURRENT_DIRECTORY.parent.joinpath(pathlib.Path('static/api/api_keys.xml'));
+
+RADIUS = 1000
 
 # Api Keys
 hereAppId = None;
@@ -29,12 +31,19 @@ def startEm():
 
 @app.route("/explore")
 def FindPlaces(x, y):
-    combinedCoord = "{0},{1}".format(x,y);
-    getVars = {'app_id': hereAppId, 'app_code': hereAppCode, 'at': combinedCoord, 'drilldown': 'true'};
-    return requests.get(HERE_COM_URL, params=getVars).json();
+    authHeader = {'Authorization': "Bearer " + yelpApiKey};
+    getVars = {'latitude': x, 'longitude': y, 'radius': RADIUS};
+    return requests.get(YELP_URL, headers=authHeader, params=getVars).json();
+
+# HERE.com Api
+#@app.route("/explore")
+#def FindPlaces(x, y):
+#    combinedCoord = "{0},{1}".format(x,y);
+#    getVars = {'app_id': hereAppId, 'app_code': hereAppCode, 'at': combinedCoord, 'drilldown': 'true'};
+#    return requests.get(HERE_COM_URL, params=getVars).json();
 
 @app.route("/info")
 def GetPlaceInfo(x, y):
     authHeader = {'Authorization': "Bearer " + yelpApiKey};
-    getVars = {'latitude': x, 'longitude': y}; # 'sort_by': 'distance'
+    getVars = {'latitude': x, 'longitude': y, 'sort_by': 'distance'};
     return requests.get(YELP_URL, headers=authHeader, params=getVars).json();
