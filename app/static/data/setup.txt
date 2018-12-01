@@ -1,0 +1,51 @@
+use jetBlueFlights;
+
+CREATE TABLE Regions(
+  Code CHAR(3),
+  Name VARCHAR(100),
+  PRIMARY KEY(Code)
+);
+
+CREATE TABLE Locations(
+  Code CHAR(3),
+  Lat FLOAT,
+  Lng FLOAT,
+  PRIMARY KEY(Code)
+);
+
+CREATE TABLE Countries(
+  Code CHAR(2),
+  Name VARCHAR(50),
+  RegionCodes VARCHAR(100),
+  PRIMARY KEY(Code)
+);
+
+CREATE TABLE Airports(
+  Code CHAR(3),
+  City VARCHAR(50),
+  Name VARCHAR(100),
+  DefaultDisplayName VARCHAR(100),
+  StateCode VARCHAR(2),
+  CountryCode CHAR(2),
+  CountryName VARCHAR(100),
+  IsBlueCity BIT,
+  IsPreClearedStation BIT,
+  IsMACCode BIT,
+  ParentMACCode BIT,
+  ChildrenMACCodes BIT,
+  RegionCodes VARCHAR(100),
+  PRIMARY KEY(Code),
+  FOREIGN KEY(Code)
+      REFERENCES Locations(Code)
+      ON DELETE CASCADE,
+  FOREIGN KEY(CountryCode)
+    REFERENCES Countries(Code)
+    ON DELETE CASCADE
+);
+
+
+//To Wipe Tables
+DELETE FROM Regions;
+DELETE FROM Locations;
+DELETE FROM Airports;
+DELETE FROM Countries;
