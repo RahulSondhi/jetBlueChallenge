@@ -1,134 +1,136 @@
 #navLogo {
-  margin-left: 1rem;
-  width: 24rem;
+    margin-left: 1rem;
+    width: 24rem;
 }
 
 nav {
-  height: 8rem;
+    height: 8rem;
 }
 
 .bg-jetBlue {
-  background-color: #00205b;
+    background-color: #00205b;
 }
 
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 html {
-  box-sizing: border-box;
-  height: 100%;
+    box-sizing: border-box;
+    height: 100%;
 }
 
 body {
-  background: #f2f6f9;
-  height: 100%;
-  font-family: 'Roboto', sans-serif;
+    background: #f2f6f9;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
 }
 
 #container {
-  display: flex;
-  width: 100%;
-  height: 100%;
+    display: flex;
+    width: 100%;
+    height: 100%;
 }
 
 #map {
-  flex: 1;
-  margin: 0px;
-  z-index: 0;
+    flex: 1;
+    margin: 0px;
+    z-index: 0;
 }
 
 /* Tooltip container */
 
 .tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 0px dotted black;
-  /* If you want dots under the hoverable text */
+    position: relative;
+    display: inline-block;
+    border-bottom: 0px dotted black;
+    /* If you want dots under the hoverable text */
 }
 
 /* Tooltip text */
 
 .tooltip .tooltiptext {
-  visibility: hidden;
-  width: 190px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  padding: 3px 0;
-  border-radius: 3px;
-  /* Position the tooltip text */
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -60px;
-  /* Fade in tooltip */
-  opacity: 0;
-  transition: opacity 1s;
+    visibility: hidden;
+    width: 190px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 3px 0;
+    border-radius: 3px;
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 1s;
 }
 
 /* Tooltip arrow */
 
 .tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -3px;
-  border-width: 3px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -3px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
 
 .tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
+    visibility: visible;
+    opacity: 1;
 }
 
 #info {
-  width: 30rem;
-  margin: auto;
-  top: 11rem;
-  right: 1rem;
-  position: absolute;
-<<<<<<< HEAD
-  height: 75vh;
-=======
-  height: 60rem;
->>>>>>> 8fea952794b78b62a2558c37c8dccb1349095ca9
-  background-color: rgba(0, 23, 65, 0.8);
-  border-radius: 1rem;
-  border-color: #fff;
-  border-width: 2px;
-  border-style: ridge;
-  z-index: 100;
-  display: flex;
-  flex-direction: column;
-  color: #fff;
+    width: 30rem;
+    margin: auto;
+    top: 11rem;
+    right: 1rem;
+    position: absolute;
+    <<<<<<< HEAD height: 75vh;
+    =======height: 60rem;
+    > > > > > > > 8fea952794b78b62a2558c37c8dccb1349095ca9 background-color: rgba(0, 23, 65, 0.8);
+    border-radius: 1rem;
+    border-color: #fff;
+    border-width: 2px;
+    border-style: ridge;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
 }
 
 #infoHeader {
-  margin-top: 1%;
-  margin-bottom: 2%;
-  width: 100%;
-  height: 19%;
-  border-bottom-width: 2px;
-  border-bottom-color: #fff;
-  border-bottom-style: solid;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    width: 100%;
+    height: 19%;
+    background-color: azure;
+    border-bottom-width: 2px;
+    border-bottom-color: #fff;
+    border-bottom-style: solid;
 }
 
 #infoBody {
-  margin-top: 1%;
-  width: 100%;
-  height: 79%;
+    margin-top: 1%;
+    width: 100%;
+    height: 79%;
 }
 
 #infoFill {
-  height: 80%;
-  width: 90%;
-  margin-left: 5%;
+    height: 80%;
+    width: 90%;
+    margin-left: 5%;
+}
+
+#Peck {
+    margin-top: 10%;
 }
