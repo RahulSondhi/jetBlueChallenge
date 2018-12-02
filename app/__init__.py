@@ -4,7 +4,7 @@ import mysql.connector
 app = Flask(__name__)
 app.config.from_object("config")
 
-#from app.views import analysis
+from app.views import analysis
 
 db = mysql.connector.connect(
   host="104.198.70.198",
