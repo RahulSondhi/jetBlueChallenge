@@ -2,7 +2,22 @@ $(function() {
 
 startEm()
 
+initSite();
+
 });
+
+var obj;
+
+async function initSite() {
+  $.ajax({
+    type: "GET",
+    cache: true,
+    url: "/static/data/cities.json",
+    success: async function(data) {
+      obj = data;
+    }
+  })
+}
 
 function startEm() {
   var map = L.map('map').setView([42.877742, -97.380979], 5);
@@ -30,21 +45,14 @@ function startEm() {
 
   var airportStyle = new carto.style.CartoCSS(`
         #layer {
-		  marker-width: 1.5;
+		  marker-width: 30;
 		  marker-fill: #8409B2;
 		  marker-fill-opacity: 1;
+        marker-file: url('https://s3.amazonaws.com/com.cartodb.users-assets.production/production/rahulsondhi/assets/20181201232317airplane.svg');
 		  marker-allow-overlap: true;
 		  marker-line-width: 0;
 		  marker-line-color: #FFFFFF;
 		  marker-line-opacity: 1;
-		  [zoom>5]{
-		  	 marker-width: 20;
-		  	 marker-fill-opacity: 0.9;
-		  }
-		   [zoom>10]{
-		  	 marker-width: 30;
-		  	 marker-fill-opacity: 0.9;
-		  }
 		}`);
 
   // // 3.3 Define another styling option for the biggest wildfires
