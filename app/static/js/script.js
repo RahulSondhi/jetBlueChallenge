@@ -117,9 +117,8 @@ function startEm() {
 
   airports.on('featureClicked', function(featureEvent) {
 
-    $("#infoFill").html('This airport is called '+featureEvent.data.name+".");
+    $("#infoFill").html(`This airport is called ${featureEvent.data.name}.`);
 
-<<<<<<< HEAD
     let places = $.ajax({
       method: 'GET',
       url: '/explore',
@@ -160,7 +159,6 @@ function startEm() {
       client.addLayers([placesLayer]);
       client.getLeafletLayer().addTo(map);
     });
-=======
 
 
     // let places = $.ajax({
