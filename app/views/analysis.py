@@ -5,6 +5,7 @@ import pathlib
 
 from flask import render_template, request
 from app import app
+import mysql.connector
 
 # REST Api Constants
 HERE_COM_URL = 'https://places.api.here.com/places/v1/discover/explore';
@@ -158,3 +159,18 @@ def startEm2():
 @app.route("/start")
 def startEm3():
     return render_template("start.html");
+
+@app.route("/airport-description")
+def GetAirportDescription():
+    code = request.args.get('code')
+    db = mysql.connector.connect(
+      host="104.198.70.198",
+      user="root",
+      passwd="",
+      database="jetBlue"
+    )
+    cursor = db.cursor();
+    mycursor.execute("SELECT * FROM Airports WHERE code={0}", code)
+    myresult = mycursor.fetchall()
+    for x in myresult:
+      print(x)

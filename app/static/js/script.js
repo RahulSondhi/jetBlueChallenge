@@ -111,8 +111,7 @@ function startEm() {
 
   airports.on('featureClicked', function(featureEvent) {
 
-    $("#infoFill").html('This airport is called '+featureEvent.data.name+".");
-
+    $("#infoFill").html(`This airport is called ${featureEvent.data.name}.`);
 
     // let places = $.ajax({
     //   method: 'GET',
@@ -165,7 +164,7 @@ function startEm() {
     }
     console.log(possibleDest);
 
-    
+
   });
 
   airports.on('featureOver', function(featureEvent) {
