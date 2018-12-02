@@ -69,7 +69,7 @@ function startEm() {
   client.getLeafletLayer().addTo(map);
 
   var placesStyle = new carto.style.CartoCSS(`
-        #layer {
+    #layer {
 		  marker-width: 30;
 		  marker-fill: #1AB2A3;
 		  marker-fill-opacity: 1;
@@ -77,10 +77,10 @@ function startEm() {
 		  marker-line-width: 0;
 		  marker-line-color: #FFFFFF;
 		  marker-line-opacity: 1;
-      [zoom>5]{
+      [zoom>5] {
         marker-width: 25;
       }
-      [zoom>10]{
+      [zoom>10] {
         marker-width: 5;
       }
 		}`);
@@ -102,8 +102,9 @@ function startEm() {
 
     let updateAoiDB = places.then(function(data) {
       let parsedData = JSON.parse(data);
-      placesSQL = new carto.source.SQL('DELETE FROM aoi');
+      //placesSQL = new carto.source.SQL('DELETE FROM aoi');
       for (let i = 0; i < parsedData.businesses.length; i++) {
+        console.log(parsedData.businesses[i].name);
         placesSQL = new carto.source.SQL(`
           INSERT INTO aoi (
             name, rating, lon, lat, price, location, phone
