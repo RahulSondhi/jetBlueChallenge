@@ -1,4 +1,4 @@
-use jetBlueFlights;
+use jetBlue;
 
 INSERT INTO Airports(Code,City,Name,StateCode,CountryCode,CountryName, IsBlueCity, IsPreClearedStation) VALUES("RIC","Richmond","Richmond","VA","US","UNITED STATES",1,0);
 CREATE TABLE Airports(

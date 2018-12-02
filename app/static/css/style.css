@@ -95,7 +95,11 @@ body {
   top: 11rem;
   right: 1rem;
   position: absolute;
+<<<<<<< HEAD
   height: 75vh;
+=======
+  height: 60rem;
+>>>>>>> 8fea952794b78b62a2558c37c8dccb1349095ca9
   background-color: rgba(0, 23, 65, 0.8);
   border-radius: 1rem;
   border-color: #fff;

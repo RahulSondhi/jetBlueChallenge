@@ -1,122 +1,122 @@
 Code,City,Name,DefaultDisplayName,StateCode,CountryCode,CountryName,IsBlueCity,IsPreClearedStation
-RIC,Richmond,Richmond,"Richmond, VA (RIC)",VA,US,UNITED STATES,true,false
-PHX,Phoenix,Phoenix Sky Harbor Intl Apt,"Phoenix, AZ (PHX)",AZ,US,UNITED STATES,true,false
-MSY,New Orleans,New Orleans Louis Armstrong Intl Apt,"New Orleans, LA (MSY)",LA,US,UNITED STATES,true,false
-EWR,Newark,Newark Liberty International Apt,"Newark, NJ (EWR)",NJ,US,UNITED STATES,true,false
-JFK,New York,New York J F Kennedy International Apt,"New York, NY (JFK)",NY,US,UNITED STATES,true,false
-LGA,New York,New York La Guardia Apt,"New York, NY (LGA)",NY,US,UNITED STATES,true,false
-ROC,Rochester,Rochester,"Rochester, NY (ROC)",NY,US,UNITED STATES,true,false
-ALB,Albany,Albany International Airport,"Albany, NY (ALB)",NY,US,UNITED STATES,true,false
-HPN,Westchester County,Westchester County,"Westchester County, NY (HPN)",NY,US,UNITED STATES,true,false
-SWF,Newburgh,Newburgh,"Newburgh, NY (SWF)",NY,US,UNITED STATES,true,false
-BUF,Buffalo,Buffalo,"Buffalo, NY (BUF)",NY,US,UNITED STATES,true,false
-SYR,Syracuse,Syracuse,"Syracuse, NY (SYR)",NY,US,UNITED STATES,true,false
-BTV,Burlington,Burlington,"Burlington, VT (BTV)",VT,US,UNITED STATES,true,false
-CLE,Cleveland,Cleveland Hopkins International Apt,"Cleveland, OH (CLE)",OH,US,UNITED STATES,true,false
-HNL,Oahu-Honolulu,Honolulu International Apt,"Oahu-Honolulu, HI (HNL)",HI,US,UNITED STATES,false,false
-OGG,Maui-Kahului,Kahului,"Maui-Kahului, HI (OGG)",HI,US,UNITED STATES,false,false
-ONT,Ontario,Ontario LA/Ontario International Apt,"Ontario, CA (ONT)",CA,US,UNITED STATES,true,false
-PSP,Palm Springs,Palm Springs Municipal Apt,"Palm Springs, CA (PSP)",CA,US,UNITED STATES,true,false
-SJC,San Jose,San Jose Norman Y. Mineta Intl,"San Jose, CA (SJC)",CA,US,UNITED STATES,true,false
-LAX,Los Angeles,Los Angeles International Apt,"Los Angeles, CA (LAX)",CA,US,UNITED STATES,true,false
-BUR,Burbank,Burbank,"Burbank, CA (BUR)",CA,US,UNITED STATES,true,false
-OAK,Oakland,Oakland International Apt,"Oakland, CA (OAK)",CA,US,UNITED STATES,true,false
-LGB,Long Beach,Long Beach Apt,"Long Beach, CA (LGB)",CA,US,UNITED STATES,true,false
-SMF,Sacramento,Sacramento International Apt,"Sacramento, CA (SMF)",CA,US,UNITED STATES,true,false
-SAN,San Diego,San Diego International,"San Diego, CA (SAN)",CA,US,UNITED STATES,true,false
-SFO,San Francisco,San Francisco International Apt,"San Francisco, CA (SFO)",CA,US,UNITED STATES,true,false
-JAX,Jacksonville,Jacksonville International Apt,"Jacksonville, FL (JAX)",FL,US,UNITED STATES,true,false
-RSW,Fort Myers,Fort Myers SW Florida International Apt,"Fort Myers, FL (RSW)",FL,US,UNITED STATES,true,false
-FLL,Fort Lauderdale,Fort Lauderdale/Hollywood Intl Apt,"Fort Lauderdale, FL (FLL)",FL,US,UNITED STATES,true,false
-MCO,Orlando,Orlando International Apt,"Orlando, FL (MCO)",FL,US,UNITED STATES,true,false
-SRQ,Sarasota,Sarasota/Bradenton,"Sarasota, FL (SRQ)",FL,US,UNITED STATES,true,false
-PBI,West Palm Beach,West Palm Beach International Apt,"West Palm Beach, FL (PBI)",FL,US,UNITED STATES,true,false
-DAB,Daytona Beach,Daytona Beach,"Daytona Beach, FL (DAB)",FL,US,UNITED STATES,true,false
-TPA,Tampa,Tampa International Apt,"Tampa, FL (TPA)",FL,US,UNITED STATES,true,false
-CHS,Charleston,Charleston,"Charleston, SC (CHS)",SC,US,UNITED STATES,true,false
-ORD,Chicago,Chicago O'Hare International Apt,"Chicago, IL (ORD)",IL,US,UNITED STATES,true,false
-PWM,Portland,Portland,"Portland, ME (PWM)",ME,US,UNITED STATES,true,false
-ABQ,Albuquerque/Santa Fe,Albuquerque,"Albuquerque/Santa Fe, NM (ABQ)",NM,US,UNITED STATES,true,false
-AUS,Austin,Austin-Bergstrom International Apt,"Austin, TX (AUS)",TX,US,UNITED STATES,true,false
-HOU,Houston,Houston Hobby Apt,"Houston, TX (HOU)",TX,US,UNITED STATES,true,false
-DFW,Dallas/Fort Worth,Dallas/Fort Worth Intl Apt,"Dallas/Fort Worth, TX (DFW)",TX,US,UNITED STATES,true,false
-MSP,Minneapolis/St. Paul,Minneapolis International Apt,"Minneapolis/St. Paul, MN (MSP)",MN,US,UNITED STATES,true,false
-BDL,Hartford,Hartford Bradley International Apt,"Hartford, CT (BDL)",CT,US,UNITED STATES,true,false
-PDX,Portland,Portland,"Portland, OR (PDX)",OR,US,UNITED STATES,true,false
-BWI,Baltimore,Baltimore Washington International Apt,"Baltimore, MD (BWI)",MD,US,UNITED STATES,true,false
-DCA,Washington,Washington Ronald Reagan National Apt,"Washington, DC (DCA)",DC,US,UNITED STATES,true,false
-IAD,Washington,Washington Dulles International Apt,"Washington, DC (IAD)",DC,US,UNITED STATES,true,false
-PVD,Providence,Providence,"Providence, RI (PVD)",RI,US,UNITED STATES,true,false
-ATL,Atlanta,Atlanta Hartsfield-Jackson Intl Apt,"Atlanta, GA (ATL)",GA,US,UNITED STATES,true,false
-SAV,Savannah/Hilton Head,Savannah/Hilton Head International Apt,"Savannah/Hilton Head, GA (SAV)",GA,US,UNITED STATES,true,false
-PHL,Philadelphia,Philadelphia International Apt,"Philadelphia, PA (PHL)",PA,US,UNITED STATES,true,false
-PIT,Pittsburgh,Pittsburgh International Apt,"Pittsburgh, PA (PIT)",PA,US,UNITED STATES,true,false
-RNO,Reno/Tahoe,Reno,"Reno/Tahoe, NV (RNO)",NV,US,UNITED STATES,true,false
-LAS,Las Vegas,Las Vegas McCarran International Apt,"Las Vegas, NV (LAS)",NV,US,UNITED STATES,true,false
-HDN,Hayden,Hayden,"Steamboat Springs, CO (HDN)",CO,US,UNITED STATES,true,false
-DEN,Denver,Denver Intl Apt,"Denver, CO (DEN)",CO,US,UNITED STATES,true,false
-ANC,Anchorage,Anchorage International Apt,"Anchorage, AK (ANC)",AK,US,UNITED STATES,true,false
-BNA,Nashville,Nashville,"Nashville, TN (BNA)",TN,US,UNITED STATES,true,false
-DTW,Detroit,Detroit Wayne County,"Detroit, MI (DTW)",MI,US,UNITED STATES,true,false
-HYA,Hyannis,Hyannis,"Hyannis, MA (HYA)",MA,US,UNITED STATES,true,false
-MVY,Martha's Vineyard,Martha's Vineyard,"Martha's Vineyard, MA (MVY)",MA,US,UNITED STATES,true,false
-BOS,Boston,Boston Logan International Apt,"Boston, MA (BOS)",MA,US,UNITED STATES,true,false
-ACK,Nantucket,Nantucket,"Nantucket, MA (ACK)",MA,US,UNITED STATES,true,false
-ORH,Worcester,Worcester,"Worcester, MA (ORH)",MA,US,UNITED STATES,true,false
-SDQ,Santo Domingo,Santo Domingo Las Americas Apt,"Santo Domingo, DR (SDQ)",DR,DO,DOMINICAN REPUBLIC,true,false
-PUJ,Punta Cana,Punta Cana,"Punta Cana, DR (PUJ)",DR,DO,DOMINICAN REPUBLIC,true,false
-LRM,La Romana,La Romana,"La Romana, DR (LRM)",DR,DO,DOMINICAN REPUBLIC,true,false
-POP,Puerto Plata,Puerto Plata,"Puerto Plata, DR (POP)",DR,DO,DOMINICAN REPUBLIC,true,false
-STI,Santiago,Santiago,"Santiago, DR (STI)",DR,DO,DOMINICAN REPUBLIC,true,false
-RDU,Raleigh/Durham,Raleigh/Durham,"Raleigh/Durham, NC (RDU)",NC,US,UNITED STATES,true,false
-CLT,Charlotte,Charlotte,"Charlotte, NC (CLT)",NC,US,UNITED STATES,true,false
-SLC,Salt Lake City,Salt Lake City,"Salt Lake City, UT (SLC)",UT,US,UNITED STATES,true,false
-BOG,Bogota,Bogota,"Bogota, Colombia (BOG)",,CO,COLOMBIA,true,false
-SNU,Santa Clara,Santa Clara,"Santa Clara, Cuba (SNU)",,CU,CUBA,true,false
-SEA,Seattle,Seattle/Tacoma International Apt,"Seattle, WA (SEA)",WA,US,UNITED STATES,true,false
-STT,St. Thomas,St Thomas Cyril E King Apt,St. Thomas (STT),,VI,U.S. VIRGIN ISLANDS,true,false
-HOG,Holguin,Holguin,"Holguin, Cuba (HOG)",,CU,CUBA,true,false
-GYE,Guayaquil,Guayaquil,Guayaquil (GYE),,EC,ECUADOR,true,false
-SJU,San Juan,San Juan Luis Munoz Marin Intl Apt,"San Juan, PR (SJU)",PR,PR,PUERTO RICO,true,false
-AXA,Anguilla - Wall Blake,Anguilla,Anguilla - Wall Blake (AXA),,AI,ANGUILLA,false,false
-VIJ,Virgin Gorda,Virgin Gorda,Virgin Gorda (VIJ),,VG,BRITISH VIRGIN ISLANDS,false,false
-EIS,Tortola,Beef Island,"Tortola, Beef Island (EIS)",,VG,BRITISH VIRGIN ISLANDS,false,false
-GCM,Grand Cayman,Grand Cayman Island,Grand Cayman (GCM),,KY,CAYMAN ISLANDS,true,false
-VQS,Vieques,Vieques,"Vieques, PR (VQS)",PR,PR,PUERTO RICO,false,false
-ANU,Antigua,Antigua,"Antigua, Antigua and Barbuda (ANU)",,AG,ANTIGUA AND BARBUDA,true,false
-MDE,Medellin,Medellin Jose Maria Cordova Intl,"Medellin, Colombia (MDE)",,CO,COLOMBIA,true,false
-MAZ,Mayaguez,Mayaguez,"Mayaguez, PR (MAZ)",PR,PR,PUERTO RICO,false,false
-UVF,St. Lucia,St Lucia Hewanorra Apt,St. Lucia (UVF),,LC,SAINT LUCIA,true,false
-HAV,Havana,Havana,"Havana, Cuba (HAV)",,CU,CUBA,true,false
-CUN,Cancun,Cancun,"Cancun, Mexico (CUN)",,MX,MEXICO,true,false
-LIR,Liberia,Liberia,"Liberia, Costa Rica (LIR)",,CR,COSTA RICA,true,false
-PSE,Ponce,Ponce,"Ponce, PR (PSE)",PR,PR,PUERTO RICO,true,false
-NAS,Nassau,Nassau International Apt,"Nassau, Bahamas (NAS)",,BS,BAHAMAS,true,false
-BZN,Bozeman,Bozeman,"Bozeman, MT (BZN)",MT,US,UNITED STATES,true,false
-BDA,Bermuda,Bermuda L.F Wade International,Bermuda (BDA),,BM,BERMUDA,true,false
-GND,Grenada,Grenada,Grenada (GND),,GD,GRENADA,true,false
-BGI,Bridgetown,Barbados,"Bridgetown, Barbados (BGI)",,BB,BARBADOS,true,false
-UIO,Quito,Quito,"Quito, Ecuador (UIO)",,EC,ECUADOR,true,false
-BQN,Aguadilla,Aguadilla,"Aguadilla, PR (BQN)",PR,PR,PUERTO RICO,true,false
-PLS,Providenciales,Providenciales,"Providenciales, Turks and Caicos (PLS)",,TC,TURKS AND CAICOS ISLANDS,true,false
-CMW,Camaguey,Camaguey,"Camaguey, Cuba (CMW)",,CU,CUBA,true,false
-STX,St. Croix,St Croix Henry E. Rohlsen Apt,St. Croix (STX),,VI,U.S. VIRGIN ISLANDS,true,false
-NEV,Nevis,Nevis,Nevis (NEV),,KN,SAINT KITTS AND NEVIS,false,false
-CUR,Curacao,Curacao,"Curacao, Curacao (CUR)",,CW,CURACAO,true,false
-KIN,Kingston,Kingston Norman Manley Intl Apt,"Kingston, Jamaica (KIN)",,JM,JAMAICA,true,false
-SXM,St. Maarten,St Maarten,St. Maarten (SXM),,SX,SAINT MAARTEN,true,false
-AUA,Aruba,Aruba,Aruba (AUA),,AW,ARUBA,true,false
-PAP,Port-au-Prince,Port au Prince,"Port-au-Prince, Haiti (PAP)",,HT,HAITI,true,false
-CTG,Cartagena,Cartagena,"Cartagena, Colombia (CTG)",,CO,COLOMBIA,true,false
-MBJ,Montego Bay,Montego Bay,"Montego Bay, Jamaica (MBJ)",,JM,JAMAICA,true,false
-POS,Port of Spain,Port of Spain,"Port of Spain, Trinidad and Tobago (POS)",,TT,TRINIDAD AND TOBAGO,true,false
-SJO,San Jose,San Jose Juan Santamaria Apt,"San Jose, Costa Rica (SJO)",,CR,COSTA RICA,true,false
-MEX,Mexico City,Mexico City Juarez International Apt,"Mexico City, Mexico (MEX)",,MX,MEXICO,true,false
-LIM,Lima,Lima,"Lima, Peru (LIM)",,PE,PERU,true,false
-NYC,New York City area,New York City area,New York City area (NYC),NJ,US,UNITED STATES,true,false
-XSF,San Francisco area,San Francisco area,San Francisco area,CA,US,UNITED STATES,true,false
-ZLA,Los Angeles area,Los Angeles area,Los Angeles area,CA,US,UNITED STATES,true,false
-XFL,Miami area,Miami area,Miami area,FL,US,UNITED STATES,true,false
-WAS,Washington DC area,Washington DC area,Washington DC area (WAS),MD,US,UNITED STATES,true,false
-XBO,Boston area,Boston area,Boston area,RI,US,UNITED STATES,true,false
-XDR,Dominican Republic southern coast area,Dominican Republic southern coast area,Dominican Republic southern coast area,DR,DO,DOMINICAN REPUBLIC,true,false
+RIC,Richmond,Richmond,"Richmond, VA (RIC)",VA,US,UNITED STATES,1,0
+PHX,Phoenix,Phoenix Sky Harbor Intl Apt,"Phoenix, AZ (PHX)",AZ,US,UNITED STATES,1,0
+MSY,New Orleans,New Orleans Louis Armstrong Intl Apt,"New Orleans, LA (MSY)",LA,US,UNITED STATES,1,0
+EWR,Newark,Newark Liberty International Apt,"Newark, NJ (EWR)",NJ,US,UNITED STATES,1,0
+JFK,New York,New York J F Kennedy International Apt,"New York, NY (JFK)",NY,US,UNITED STATES,1,0
+LGA,New York,New York La Guardia Apt,"New York, NY (LGA)",NY,US,UNITED STATES,1,0
+ROC,Rochester,Rochester,"Rochester, NY (ROC)",NY,US,UNITED STATES,1,0
+ALB,Albany,Albany International Airport,"Albany, NY (ALB)",NY,US,UNITED STATES,1,0
+HPN,Westchester County,Westchester County,"Westchester County, NY (HPN)",NY,US,UNITED STATES,1,0
+SWF,Newburgh,Newburgh,"Newburgh, NY (SWF)",NY,US,UNITED STATES,1,0
+BUF,Buffalo,Buffalo,"Buffalo, NY (BUF)",NY,US,UNITED STATES,1,0
+SYR,Syracuse,Syracuse,"Syracuse, NY (SYR)",NY,US,UNITED STATES,1,0
+BTV,Burlington,Burlington,"Burlington, VT (BTV)",VT,US,UNITED STATES,1,0
+CLE,Cleveland,Cleveland Hopkins International Apt,"Cleveland, OH (CLE)",OH,US,UNITED STATES,1,0
+HNL,Oahu-Honolulu,Honolulu International Apt,"Oahu-Honolulu, HI (HNL)",HI,US,UNITED STATES,0,0
+OGG,Maui-Kahului,Kahului,"Maui-Kahului, HI (OGG)",HI,US,UNITED STATES,0,0
+ONT,Ontario,Ontario LA/Ontario International Apt,"Ontario, CA (ONT)",CA,US,UNITED STATES,1,0
+PSP,Palm Springs,Palm Springs Municipal Apt,"Palm Springs, CA (PSP)",CA,US,UNITED STATES,1,0
+SJC,San Jose,San Jose Norman Y. Mineta Intl,"San Jose, CA (SJC)",CA,US,UNITED STATES,1,0
+LAX,Los Angeles,Los Angeles International Apt,"Los Angeles, CA (LAX)",CA,US,UNITED STATES,1,0
+BUR,Burbank,Burbank,"Burbank, CA (BUR)",CA,US,UNITED STATES,1,0
+OAK,Oakland,Oakland International Apt,"Oakland, CA (OAK)",CA,US,UNITED STATES,1,0
+LGB,Long Beach,Long Beach Apt,"Long Beach, CA (LGB)",CA,US,UNITED STATES,1,0
+SMF,Sacramento,Sacramento International Apt,"Sacramento, CA (SMF)",CA,US,UNITED STATES,1,0
+SAN,San Diego,San Diego International,"San Diego, CA (SAN)",CA,US,UNITED STATES,1,0
+SFO,San Francisco,San Francisco International Apt,"San Francisco, CA (SFO)",CA,US,UNITED STATES,1,0
+JAX,Jacksonville,Jacksonville International Apt,"Jacksonville, FL (JAX)",FL,US,UNITED STATES,1,0
+RSW,Fort Myers,Fort Myers SW Florida International Apt,"Fort Myers, FL (RSW)",FL,US,UNITED STATES,1,0
+FLL,Fort Lauderdale,Fort Lauderdale/Hollywood Intl Apt,"Fort Lauderdale, FL (FLL)",FL,US,UNITED STATES,1,0
+MCO,Orlando,Orlando International Apt,"Orlando, FL (MCO)",FL,US,UNITED STATES,1,0
+SRQ,Sarasota,Sarasota/Bradenton,"Sarasota, FL (SRQ)",FL,US,UNITED STATES,1,0
+PBI,West Palm Beach,West Palm Beach International Apt,"West Palm Beach, FL (PBI)",FL,US,UNITED STATES,1,0
+DAB,Daytona Beach,Daytona Beach,"Daytona Beach, FL (DAB)",FL,US,UNITED STATES,1,0
+TPA,Tampa,Tampa International Apt,"Tampa, FL (TPA)",FL,US,UNITED STATES,1,0
+CHS,Charleston,Charleston,"Charleston, SC (CHS)",SC,US,UNITED STATES,1,0
+ORD,Chicago,Chicago O'Hare International Apt,"Chicago, IL (ORD)",IL,US,UNITED STATES,1,0
+PWM,Portland,Portland,"Portland, ME (PWM)",ME,US,UNITED STATES,1,0
+ABQ,Albuquerque/Santa Fe,Albuquerque,"Albuquerque/Santa Fe, NM (ABQ)",NM,US,UNITED STATES,1,0
+AUS,Austin,Austin-Bergstrom International Apt,"Austin, TX (AUS)",TX,US,UNITED STATES,1,0
+HOU,Houston,Houston Hobby Apt,"Houston, TX (HOU)",TX,US,UNITED STATES,1,0
+DFW,Dallas/Fort Worth,Dallas/Fort Worth Intl Apt,"Dallas/Fort Worth, TX (DFW)",TX,US,UNITED STATES,1,0
+MSP,Minneapolis/St. Paul,Minneapolis International Apt,"Minneapolis/St. Paul, MN (MSP)",MN,US,UNITED STATES,1,0
+BDL,Hartford,Hartford Bradley International Apt,"Hartford, CT (BDL)",CT,US,UNITED STATES,1,0
+PDX,Portland,Portland,"Portland, OR (PDX)",OR,US,UNITED STATES,1,0
+BWI,Baltimore,Baltimore Washington International Apt,"Baltimore, MD (BWI)",MD,US,UNITED STATES,1,0
+DCA,Washington,Washington Ronald Reagan National Apt,"Washington, DC (DCA)",DC,US,UNITED STATES,1,0
+IAD,Washington,Washington Dulles International Apt,"Washington, DC (IAD)",DC,US,UNITED STATES,1,0
+PVD,Providence,Providence,"Providence, RI (PVD)",RI,US,UNITED STATES,1,0
+ATL,Atlanta,Atlanta Hartsfield-Jackson Intl Apt,"Atlanta, GA (ATL)",GA,US,UNITED STATES,1,0
+SAV,Savannah/Hilton Head,Savannah/Hilton Head International Apt,"Savannah/Hilton Head, GA (SAV)",GA,US,UNITED STATES,1,0
+PHL,Philadelphia,Philadelphia International Apt,"Philadelphia, PA (PHL)",PA,US,UNITED STATES,1,0
+PIT,Pittsburgh,Pittsburgh International Apt,"Pittsburgh, PA (PIT)",PA,US,UNITED STATES,1,0
+RNO,Reno/Tahoe,Reno,"Reno/Tahoe, NV (RNO)",NV,US,UNITED STATES,1,0
+LAS,Las Vegas,Las Vegas McCarran International Apt,"Las Vegas, NV (LAS)",NV,US,UNITED STATES,1,0
+HDN,Hayden,Hayden,"Steamboat Springs, CO (HDN)",CO,US,UNITED STATES,1,0
+DEN,Denver,Denver Intl Apt,"Denver, CO (DEN)",CO,US,UNITED STATES,1,0
+ANC,Anchorage,Anchorage International Apt,"Anchorage, AK (ANC)",AK,US,UNITED STATES,1,0
+BNA,Nashville,Nashville,"Nashville, TN (BNA)",TN,US,UNITED STATES,1,0
+DTW,Detroit,Detroit Wayne County,"Detroit, MI (DTW)",MI,US,UNITED STATES,1,0
+HYA,Hyannis,Hyannis,"Hyannis, MA (HYA)",MA,US,UNITED STATES,1,0
+MVY,Martha's Vineyard,Martha's Vineyard,"Martha's Vineyard, MA (MVY)",MA,US,UNITED STATES,1,0
+BOS,Boston,Boston Logan International Apt,"Boston, MA (BOS)",MA,US,UNITED STATES,1,0
+ACK,Nantucket,Nantucket,"Nantucket, MA (ACK)",MA,US,UNITED STATES,1,0
+ORH,Worcester,Worcester,"Worcester, MA (ORH)",MA,US,UNITED STATES,1,0
+SDQ,Santo Domingo,Santo Domingo Las Americas Apt,"Santo Domingo, DR (SDQ)",DR,DO,DOMINICAN REPUBLIC,1,0
+PUJ,Punta Cana,Punta Cana,"Punta Cana, DR (PUJ)",DR,DO,DOMINICAN REPUBLIC,1,0
+LRM,La Romana,La Romana,"La Romana, DR (LRM)",DR,DO,DOMINICAN REPUBLIC,1,0
+POP,Puerto Plata,Puerto Plata,"Puerto Plata, DR (POP)",DR,DO,DOMINICAN REPUBLIC,1,0
+STI,Santiago,Santiago,"Santiago, DR (STI)",DR,DO,DOMINICAN REPUBLIC,1,0
+RDU,Raleigh/Durham,Raleigh/Durham,"Raleigh/Durham, NC (RDU)",NC,US,UNITED STATES,1,0
+CLT,Charlotte,Charlotte,"Charlotte, NC (CLT)",NC,US,UNITED STATES,1,0
+SLC,Salt Lake City,Salt Lake City,"Salt Lake City, UT (SLC)",UT,US,UNITED STATES,1,0
+BOG,Bogota,Bogota,"Bogota, Colombia (BOG)",,CO,COLOMBIA,1,0
+SNU,Santa Clara,Santa Clara,"Santa Clara, Cuba (SNU)",,CU,CUBA,1,0
+SEA,Seattle,Seattle/Tacoma International Apt,"Seattle, WA (SEA)",WA,US,UNITED STATES,1,0
+STT,St. Thomas,St Thomas Cyril E King Apt,St. Thomas (STT),,VI,U.S. VIRGIN ISLANDS,1,0
+HOG,Holguin,Holguin,"Holguin, Cuba (HOG)",,CU,CUBA,1,0
+GYE,Guayaquil,Guayaquil,Guayaquil (GYE),,EC,ECUADOR,1,0
+SJU,San Juan,San Juan Luis Munoz Marin Intl Apt,"San Juan, PR (SJU)",PR,PR,PUERTO RICO,1,0
+AXA,Anguilla - Wall Blake,Anguilla,Anguilla - Wall Blake (AXA),,AI,ANGUILLA,0,0
+VIJ,Virgin Gorda,Virgin Gorda,Virgin Gorda (VIJ),,VG,BRITISH VIRGIN ISLANDS,0,0
+EIS,Tortola,Beef Island,"Tortola, Beef Island (EIS)",,VG,BRITISH VIRGIN ISLANDS,0,0
+GCM,Grand Cayman,Grand Cayman Island,Grand Cayman (GCM),,KY,CAYMAN ISLANDS,1,0
+VQS,Vieques,Vieques,"Vieques, PR (VQS)",PR,PR,PUERTO RICO,0,0
+ANU,Antigua,Antigua,"Antigua, Antigua and Barbuda (ANU)",,AG,ANTIGUA AND BARBUDA,1,0
+MDE,Medellin,Medellin Jose Maria Cordova Intl,"Medellin, Colombia (MDE)",,CO,COLOMBIA,1,0
+MAZ,Mayaguez,Mayaguez,"Mayaguez, PR (MAZ)",PR,PR,PUERTO RICO,0,0
+UVF,St. Lucia,St Lucia Hewanorra Apt,St. Lucia (UVF),,LC,SAINT LUCIA,1,0
+HAV,Havana,Havana,"Havana, Cuba (HAV)",,CU,CUBA,1,0
+CUN,Cancun,Cancun,"Cancun, Mexico (CUN)",,MX,MEXICO,1,0
+LIR,Liberia,Liberia,"Liberia, Costa Rica (LIR)",,CR,COSTA RICA,1,0
+PSE,Ponce,Ponce,"Ponce, PR (PSE)",PR,PR,PUERTO RICO,1,0
+NAS,Nassau,Nassau International Apt,"Nassau, Bahamas (NAS)",,BS,BAHAMAS,1,0
+BZN,Bozeman,Bozeman,"Bozeman, MT (BZN)",MT,US,UNITED STATES,1,0
+BDA,Bermuda,Bermuda L.F Wade International,Bermuda (BDA),,BM,BERMUDA,1,0
+GND,Grenada,Grenada,Grenada (GND),,GD,GRENADA,1,0
+BGI,Bridgetown,Barbados,"Bridgetown, Barbados (BGI)",,BB,BARBADOS,1,0
+UIO,Quito,Quito,"Quito, Ecuador (UIO)",,EC,ECUADOR,1,0
+BQN,Aguadilla,Aguadilla,"Aguadilla, PR (BQN)",PR,PR,PUERTO RICO,1,0
+PLS,Providenciales,Providenciales,"Providenciales, Turks and Caicos (PLS)",,TC,TURKS AND CAICOS ISLANDS,1,0
+CMW,Camaguey,Camaguey,"Camaguey, Cuba (CMW)",,CU,CUBA,1,0
+STX,St. Croix,St Croix Henry E. Rohlsen Apt,St. Croix (STX),,VI,U.S. VIRGIN ISLANDS,1,0
+NEV,Nevis,Nevis,Nevis (NEV),,KN,SAINT KITTS AND NEVIS,0,0
+CUR,Curacao,Curacao,"Curacao, Curacao (CUR)",,CW,CURACAO,1,0
+KIN,Kingston,Kingston Norman Manley Intl Apt,"Kingston, Jamaica (KIN)",,JM,JAMAICA,1,0
+SXM,St. Maarten,St Maarten,St. Maarten (SXM),,SX,SAINT MAARTEN,1,0
+AUA,Aruba,Aruba,Aruba (AUA),,AW,ARUBA,1,0
+PAP,Port-au-Prince,Port au Prince,"Port-au-Prince, Haiti (PAP)",,HT,HAITI,1,0
+CTG,Cartagena,Cartagena,"Cartagena, Colombia (CTG)",,CO,COLOMBIA,1,0
+MBJ,Montego Bay,Montego Bay,"Montego Bay, Jamaica (MBJ)",,JM,JAMAICA,1,0
+POS,Port of Spain,Port of Spain,"Port of Spain, Trinidad and Tobago (POS)",,TT,TRINIDAD AND TOBAGO,1,0
+SJO,San Jose,San Jose Juan Santamaria Apt,"San Jose, Costa Rica (SJO)",,CR,COSTA RICA,1,0
+MEX,Mexico City,Mexico City Juarez International Apt,"Mexico City, Mexico (MEX)",,MX,MEXICO,1,0
+LIM,Lima,Lima,"Lima, Peru (LIM)",,PE,PERU,1,0
+NYC,New York City area,New York City area,New York City area (NYC),NJ,US,UNITED STATES,1,0
+XSF,San Francisco area,San Francisco area,San Francisco area,CA,US,UNITED STATES,1,0
+ZLA,Los Angeles area,Los Angeles area,Los Angeles area,CA,US,UNITED STATES,1,0
+XFL,Miami area,Miami area,Miami area,FL,US,UNITED STATES,1,0
+WAS,Washington DC area,Washington DC area,Washington DC area (WAS),MD,US,UNITED STATES,1,0
+XBO,Boston area,Boston area,Boston area,RI,US,UNITED STATES,1,0
+XDR,Dominican Republic southern coast area,Dominican Republic southern coast area,Dominican Republic southern coast area,DR,DO,DOMINICAN REPUBLIC,1,0
