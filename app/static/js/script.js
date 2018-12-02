@@ -1,3 +1,27 @@
+var config = {
+  delimiter: "", // auto-detect
+  newline: "", // auto-detect
+  quoteChar: '"',
+  escapeChar: '"',
+  header: true,
+  trimHeaders: false,
+  dynamicTyping: false,
+  preview: 0,
+  encoding: "",
+  worker: false,
+  comments: false,
+  step: undefined,
+  complete: undefined,
+  error: undefined,
+  download: false,
+  skipEmptyLines: false,
+  chunk: undefined,
+  fastMode: undefined,
+  beforeFirstChunk: undefined,
+  withCredentials: undefined,
+  transform: undefined
+};
+
 $(function() {
 
   startEm()
@@ -6,17 +30,23 @@ $(function() {
 
 });
 
-var obj;
+var route;
 
 async function initSite() {
   $.ajax({
     type: "GET",
     cache: true,
-    url: "/static/data/cities.json",
+    url: "/static/data/routes.csv",
     success: async function(data) {
-      obj = data;
+      route = await initdata(data);
     }
   })
+}
+
+async function initdata(data){
+  var tempData = await Papa.parse(data, config);
+
+  return tempData;
 }
 
 function startEm() {
@@ -46,7 +76,7 @@ function startEm() {
   var airportStyle = new carto.style.CartoCSS(`
         #layer {
 		  marker-width: 60;
-        marker-file: url('https://s3.amazonaws.com/com.cartodb.users-assets.production/production/rahulsondhi/assets/20181201232317airplane.svg');
+      marker-file: url('https://s3.amazonaws.com/com.cartodb.users-assets.production/production/rahulsondhi/assets/20181201232317airplane.svg');
 		  marker-allow-overlap: true;
 		  marker-line-width: 0;
 		  marker-line-color: #FFFFFF;
@@ -88,6 +118,8 @@ function startEm() {
   airports.on('featureClicked', function(featureEvent) {
 
     $("#infoFill").html('This airport is called '+featureEvent.data.name+".");
+
+
 
     // let places = $.ajax({
     //   method: 'GET',
