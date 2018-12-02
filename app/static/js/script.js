@@ -68,11 +68,68 @@ function startEm() {
   client.addLayers([airports]);
   client.getLeafletLayer().addTo(map);
 
+  var placesStyle = new carto.style.CartoCSS(`
+        #layer {
+		  marker-width: 30;
+		  marker-fill: #1AB2A3;
+		  marker-fill-opacity: 1;
+		  marker-allow-overlap: true;
+		  marker-line-width: 0;
+		  marker-line-color: #FFFFFF;
+		  marker-line-opacity: 1;
+      [zoom>5]{
+        marker-width: 25;
+      }
+      [zoom>10]{
+        marker-width: 5;
+      }
+		}`);
+
   var popup = L.popup();
 
   airports.on('featureClicked', function(featureEvent) {
     $("#infoFill").html('This airport is called '+featureEvent.data.name+".");
-    // featureEvent.data.lon and featureEvent.data.lat
+
+    let places = $.ajax({
+      method: 'GET',
+      url: '../views/analysis.py/explore',
+      data: {
+        x: featureEvent.data.lat,
+        y: featureEvent.data.lon,
+        isAccessible: false // TODO: This should be user set
+      }
+    });
+
+    let updateAoiDB = places.then(function(data) {
+      console.log(JSON.stringify(data));
+      let placesSQL;
+      placesSQL = new carto.layer.Layer('DELETE FROM aoi');
+      for (let business in data) {
+        console.log(JSON.stringify(business));
+        placesSQL = new carto.layer.Layer(`
+          INSERT INTO aoi (
+            name, rating, lon, lat, price, location, phone
+          ) VALUES (
+            ${data.name},
+            ${data.rating},
+            ${data.coordinates.longitude},
+            ${data.coordinates.latitude},
+            ${data.price},
+            ${JSON.stringify(data.location)},
+            ${data.display_phone}
+          );`);
+      }
+    });
+
+    let cartoPlacesLayer = updateAoiDB.then(function() {
+      let placesDataset = new carto.layer.Layer('SELECT * FROM aoi');
+      let placesLayer = new carto.layer.Layer(placesDataset, placesStyle, {
+        featureOverColumns: ['name', 'lon', 'lat']
+      });
+
+      client.addLayers([placesLayer]);
+      client.getLeafletLayer().addTo(map);
+    });
   });
   airports.on('featureOver', function(featureEvent) {
     popup.setLatLng(featureEvent.latLng);

@@ -34,7 +34,7 @@ yelpAuthHeader = None;
 @app.route("/")
 def startEm():
     # Get Api keys
-    root = xml.etree.ElementTree.parse(pathlib.PurePath(KEY_FILE_PATH)).getroot();
+    root = xml.etree.ElementTree.parse(KEY_FILE_PATH).getroot();
     global hereAppId, hereAppCode, yelpApiKey, yelpAuthHeader;
     hereAppId = root.find('.//*[@name="here_app_id"]').text;
     hereAppCode = root.find('.//*[@name="here_app_code"]').text;
