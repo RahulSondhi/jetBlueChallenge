@@ -120,9 +120,10 @@ function startEm() {
     });
 
     description.then(function (descripData) {
-      console.log(data);
+      let parsedDescription = JSON.parse(descripData);
+      console.log(parsedDescription);
       $("#infoFill").html(`This airport is called ${featureEvent.data.name}.
-        ${descripData}`);
+        ${parsedDescription.Name}`);
     })
 
     //fetch("/airport-description", { })
