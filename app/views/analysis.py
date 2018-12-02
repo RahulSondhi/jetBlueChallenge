@@ -12,13 +12,16 @@ YELP_URL = 'https://api.yelp.com/v3/businesses/search';
 CURRENT_DIRECTORY = pathlib.Path(__file__).absolute().parent;
 KEY_FILE_PATH = CURRENT_DIRECTORY.parent.joinpath(pathlib.Path('static/api/api_keys.xml'));
 
-RADIUS = 1000
+CATEGORIES = ['active','arts','food','tours','localflavor','nightlife','restaurants','shopping']
+RADIUS = 80000 # meters, ~50 miles
+SEARCH_LIMIT = 25
 
 # Api Keys
 hereAppId = None;
 hereAppCode = None;
 yelpApiKey = None;
 
+# Get api keys and return html for site
 @app.route("/")
 def startEm():
     # Get Api keys
@@ -29,10 +32,12 @@ def startEm():
     yelpApiKey = root.find('.//*[@name="yelp_api_key"]').text;
     return render_template("index.html");
 
+# Find places of interest around the specified location
 @app.route("/explore")
 def FindPlaces(x, y):
+    categoryString = ',',join(CATEGORIES);
     authHeader = {'Authorization': "Bearer " + yelpApiKey};
-    getVars = {'latitude': x, 'longitude': y, 'radius': RADIUS};
+    getVars = {'latitude': x, 'longitude': y, 'radius': RADIUS, 'categories': categoryString, 'limit': SEARCH_LIMIT};
     return requests.get(YELP_URL, headers=authHeader, params=getVars).json();
 
 # HERE.com Api
