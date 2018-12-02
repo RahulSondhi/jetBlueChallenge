@@ -36,6 +36,7 @@ body {
 #map {
   flex: 1;
   margin: 0px;
+  z-index: 0;
 }
 
 /* Tooltip container */
@@ -86,4 +87,44 @@ body {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
+}
+
+#info {
+  width: 30rem;
+  margin: auto;
+  top: 11rem;
+  right: 1rem;
+  position: absolute;
+  height: 75rem;
+  background-color: rgba(0, 23, 65, 0.8);
+  border-radius: 1rem;
+  border-color: #fff;
+  border-width: 2px;
+  border-style: ridge;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+#infoHeader {
+  margin-top: 1%;
+  margin-bottom: 2%;
+  width: 100%;
+  height: 19%;
+  border-bottom-width: 2px;
+  border-bottom-color: #fff;
+  border-bottom-style: solid;
+}
+
+#infoBody {
+  margin-top: 1%;
+  width: 100%;
+  height: 79%;
+}
+
+#infoFill {
+  height: 80%;
+  width: 90%;
+  margin-left: 5%;
 }

@@ -1,8 +1,8 @@
 $(function() {
 
-startEm()
+  startEm()
 
-initSite();
+  initSite();
 
 });
 
@@ -45,7 +45,7 @@ function startEm() {
 
   var airportStyle = new carto.style.CartoCSS(`
         #layer {
-		  marker-width: 30;
+		  marker-width: 60;
 		  marker-fill: #8409B2;
 		  marker-fill-opacity: 1;
         marker-file: url('https://s3.amazonaws.com/com.cartodb.users-assets.production/production/rahulsondhi/assets/20181201232317airplane.svg');
@@ -53,57 +53,36 @@ function startEm() {
 		  marker-line-width: 0;
 		  marker-line-color: #FFFFFF;
 		  marker-line-opacity: 1;
+      [zoom>5]{
+        marker-width: 40;
+      }
+      [zoom>10]{
+        marker-width: 10;
+      }
 		}`);
 
-  // // 3.3 Define another styling option for the biggest wildfires
-  // var bigWildfiresStyle = new carto.style.CartoCSS(`
-  //     #layer {
-  //         marker-width: ramp([fire_size], range(4, 40), equal(10));
-  //         marker-fill: ramp([stat_cause_descr], (#5F4690, #1D6996, #38A6A5, #0F8554, #73AF48, #EDAD08, #E17C05, #CC503E, #94346E, #6F4070, #666666), ("Debris Burning", "Miscellaneous", "Arson", "Lightning", "Missing/Undefined", "Equipment Use", "Campfire", "Children", "Smoking", "Railroad"), "=");
-  //         marker-fill-opacity: 1;
-  //         marker-allow-overlap: true;
-  //         marker-line-width: 0;
-  //         marker-line-color: #FFFFFF;
-  //         marker-line-opacity: 1;
-  //         [zoom>5]{
-  //            marker-fill-opacity: 0.9;
-  //         }
-  //          [zoom>10]{
-  //            marker-fill-opacity: 0.9;
-  //         }
-  //         }
-  //     #markers {
-  //   marker-file: url(https://image.flaticon.com/icons/svg/24/24143.svg);
-  //   }`);
+  var airports = new carto.layer.Layer(airportDataset, airportStyle, {
+    featureOverColumns: ['name', 'lon', 'lat']
+  });
 
-  // Create a layer object, combining a source and style.
-  // Identify columns that should be accessible on mouseover
-  var airports = new carto.layer.Layer(airportDataset, airportStyle);
-
-  // 3.4 Adding the layer(s) to the client
   client.addLayers([airports]);
-
-  // // 3.5 Adding the layer(s) to the map
   client.getLeafletLayer().addTo(map);
 
-  // // Creating a pop-up on the layer object
-  // var popup = L.popup();
-  // wildfires.on('featureOver', function(featureEvent) {
-  //   popup.setLatLng(featureEvent.latLng);
-  //   // some HTML for formatting the pop-up content, get emoji from the style library
-  //   popup.setContent(`<h2>Fire Name: ${featureEvent.data.fire_name}</h2>
-  //                       <i class="em em-fire"
-  //                          style="width: ${Math.log(Math.ceil(featureEvent.data.fire_size))+20}px;
-  //                                 height: ${Math.log(Math.ceil(featureEvent.data.fire_size))+20}px;">
-  //                       </i>
-  //                       <p style="font-size:16px";><strong>Fire size (acres):</strong> ${featureEvent.data.fire_size.toFixed(2)}</p>
-  //                       <p style="font-size:16px";><strong>Year of Discovery:</strong> ${featureEvent.data.fire_year}</p>
-  //                       <p>`);
-  //   popup.openOn(map);
-  // });
-  // wildfires.on('featureOut', function(featureEvent) {
-  //   popup.removeFrom(map);
-  // });
+  var popup = L.popup();
+
+  airports.on('featureClicked', function(featureEvent) {
+    $("#infoFill").html('This airport is called '+featureEvent.data.name+".");
+    // featureEvent.data.lon and featureEvent.data.lat
+  });
+  airports.on('featureOver', function(featureEvent) {
+    popup.setLatLng(featureEvent.latLng);
+    popup.setContent(`<h2>${featureEvent.data.name}</h2>`);
+    popup.openOn(map);
+  });
+  airports.on('featureOut', function(featureEvent) {
+    popup.removeFrom(map);
+  });
+
   //
   // // // 4.1 Defining a category dataview
   // var wildfiresDataView = new carto.dataview.Category(wildfiresSQL, 'stat_cause_descr', {
@@ -170,16 +149,4 @@ function startEm() {
   //
   // // // 4.3 Adding the dataview to the client
   // client.addDataview(airportDataView);
-
-  // 5 Adding the bounding box filter
-  // 5.1 Defining the bounding box filter for the map
-  var boundingBoxFilter = new carto.filter.BoundingBoxLeaflet(map);
-  // 5.2 Apply the bounding box filter to the dataview
-  var applyBoundingBox = function(event) {
-    if (event.checked) {
-      wildfiresDataView.addFilter(boundingBoxFilter);
-    } else {
-      wildfiresDataView.removeFilter(boundingBoxFilter);
-    }
-  }
 }
