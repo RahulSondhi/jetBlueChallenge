@@ -1,3 +1,4 @@
+import json
 import requests
 import xml.etree.ElementTree
 import pathlib
@@ -45,15 +46,20 @@ def startEm():
 # Find places of interest around the specified location
 # Args: x and y coordinates, isAccessible is a bool for wheelchair accessibility
 @app.route("/explore")
-def FindPlaces(x, y, isAccessible):
+def FindPlaces():
+    # Get Args
+    x = request.args.get('lat');
+    y = request.args.get('lon');
+    isAccessible = request.args.get('isAccessible');
+
     # Check for repeated coordinates to avoid excessive calls
     global exploreCoords, exploreData;
     if exploreCoords[0] == x and exploreCoords[1] == y:
-        return exploreData;
+        return json.dumps(exploreData);
 
     exploreCoords[0] = x;
     exploreCoords[1] = y;
-    categoryString = ',',join(CATEGORIES);
+    categoryString = ','.join(CATEGORIES);
     getVars = {
         'latitude': x,
         'longitude': y,
@@ -70,7 +76,7 @@ def FindPlaces(x, y, isAccessible):
         headers=yelpAuthHeader,
         params=getVars
     ).json();
-    return exploreData;
+    return json.dumps(exploreData);
 
 # HERE.com Api
 #@app.route("/explore")
@@ -87,11 +93,15 @@ def FindPlaces(x, y, isAccessible):
 # Get detailed information about a location
 # Args: x and y coordinates of the business
 @app.route("/info")
-def GetPlaceInfo(x, y):
+def GetPlaceInfo():
+    # Get Args
+    x = request.args.get('lat');
+    y = request.args.get('lon');
+
     # Check for repeated coordinates to avoid excessive calls
     global infoCoords, infoData;
     if infoCoords[0] == x and infoCoords[1] == y:
-        return infoData;
+        return json.dumps(infoData);
 
     infoCoords[0] = x;
     infoCoords[1] = y;
@@ -113,16 +123,20 @@ def GetPlaceInfo(x, y):
         YELP_URL + '/' + placeId,
         headers=yelpAuthHeader
     ).json();
-    return infoData;
+    return json.dumps(infoData);
 
 # Get reviews for a location
 # Args: x and y coordinates
 @app.route("/reviews")
-def GetPlaceReviews(x, y):
+def GetPlaceReviews():
+    # Get Args
+    x = request.args.get('lat');
+    y = request.args.get('lon');
+
     # Check for repeated coordinates to avoid excessive calls
     global reviewCoords, reviewData;
     if reviewCoords[0] == x and reviewCoords[1] == y:
-        return reviewData;
+        return json.dumps(reviewData);
     elif not (infoCoords[0] == x and infoCoords[1] == y):
         # need to get place info
         GetPlaceInfo(x,y);
@@ -135,4 +149,4 @@ def GetPlaceReviews(x, y):
     if 'error' in reviewData:
         url = '{0}/{1}/reviews'.format(YELP_URL, reviewData['error']['new_business_id']);
         reviewData = requests.get(url, headers=yelpAuthHeader).json();
-    return reviewData;
+    return json.dumps(reviewData);

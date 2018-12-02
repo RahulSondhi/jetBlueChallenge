@@ -92,37 +92,36 @@ function startEm() {
 
     let places = $.ajax({
       method: 'GET',
-      url: '../views/analysis.py/explore',
+      url: '/explore',
       data: {
-        x: featureEvent.data.lat,
-        y: featureEvent.data.lon,
+        lat: featureEvent.data.lat,
+        lon: featureEvent.data.lon,
         isAccessible: false // TODO: This should be user set
       }
     });
 
     let updateAoiDB = places.then(function(data) {
-      console.log(JSON.stringify(data));
-      let placesSQL;
-      placesSQL = new carto.layer.Layer('DELETE FROM aoi');
-      for (let business in data) {
-        console.log(JSON.stringify(business));
-        placesSQL = new carto.layer.Layer(`
+      let parsedData = JSON.parse(data);
+      placesSQL = new carto.source.SQL('DELETE FROM aoi');
+      for (let i = 0; i < parsedData.businesses.length; i++) {
+        placesSQL = new carto.source.SQL(`
           INSERT INTO aoi (
             name, rating, lon, lat, price, location, phone
           ) VALUES (
-            ${data.name},
-            ${data.rating},
-            ${data.coordinates.longitude},
-            ${data.coordinates.latitude},
-            ${data.price},
-            ${JSON.stringify(data.location)},
-            ${data.display_phone}
+            ${parsedData.businesses[i].name},
+            ${parsedData.businesses[i].rating},
+            ${parsedData.businesses[i].coordinates.longitude},
+            ${parsedData.businesses[i].coordinates.latitude},
+            ${parsedData.businesses[i].price},
+            ${JSON.stringify(parsedData.businesses[i].location)},
+            ${parsedData.businesses[i].display_phone}
           );`);
       }
     });
 
     let cartoPlacesLayer = updateAoiDB.then(function() {
-      let placesDataset = new carto.layer.Layer('SELECT * FROM aoi');
+      let placesDataset = new carto.source.SQL('SELECT * FROM aoi');
+      console.log('database selected');
       let placesLayer = new carto.layer.Layer(placesDataset, placesStyle, {
         featureOverColumns: ['name', 'lon', 'lat']
       });
