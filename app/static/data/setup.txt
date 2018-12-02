@@ -1,25 +1,6 @@
 use jetBlueFlights;
 
-CREATE TABLE Regions(
-  Code CHAR(3),
-  Name VARCHAR(100),
-  PRIMARY KEY(Code)
-);
-
-CREATE TABLE Locations(
-  Code CHAR(3),
-  Lat FLOAT,
-  Lng FLOAT,
-  PRIMARY KEY(Code)
-);
-
-CREATE TABLE Countries(
-  Code CHAR(2),
-  Name VARCHAR(50),
-  RegionCodes VARCHAR(100),
-  PRIMARY KEY(Code)
-);
-
+INSERT INTO Airports(Code,City,Name,StateCode,CountryCode,CountryName, IsBlueCity, IsPreClearedStation) VALUES("RIC","Richmond","Richmond","VA","US","UNITED STATES",1,0);
 CREATE TABLE Airports(
   Code CHAR(3),
   City VARCHAR(50),
@@ -30,22 +11,9 @@ CREATE TABLE Airports(
   CountryName VARCHAR(100),
   IsBlueCity BIT,
   IsPreClearedStation BIT,
-  IsMACCode BIT,
-  ParentMACCode BIT,
-  ChildrenMACCodes BIT,
-  RegionCodes VARCHAR(100),
-  PRIMARY KEY(Code),
-  FOREIGN KEY(Code)
-      REFERENCES Locations(Code)
-      ON DELETE CASCADE,
-  FOREIGN KEY(CountryCode)
-    REFERENCES Countries(Code)
-    ON DELETE CASCADE
+  PRIMARY KEY(Code)
 );
 
 
 //To Wipe Tables
-DELETE FROM Regions;
-DELETE FROM Locations;
 DELETE FROM Airports;
-DELETE FROM Countries;
