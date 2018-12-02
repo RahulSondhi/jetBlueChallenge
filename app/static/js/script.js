@@ -36,17 +36,11 @@ async function initSite() {
   $.ajax({
     type: "GET",
     cache: true,
-    url: "/static/data/routes.csv",
+    url: "/static/data/routes.json",
     success: async function(data) {
-      route = await initdata(data);
+      route = data;
     }
   })
-}
-
-async function initdata(data){
-  var tempData = await Papa.parse(data, config);
-
-  return tempData;
 }
 
 function startEm() {
@@ -119,50 +113,7 @@ function startEm() {
 
     $("#infoFill").html('This airport is called '+featureEvent.data.name+".");
 
-<<<<<<< HEAD
-    let places = $.ajax({
-      method: 'GET',
-      url: '/explore',
-      data: {
-        lat: featureEvent.data.lat,
-        lon: featureEvent.data.lon,
-        isAccessible: false // TODO: This should be user set
-      }
-    });
-
-    let updateAoiDB = places.then(function(data) {
-      let parsedData = JSON.parse(data);
-      //placesSQL = new carto.source.SQL('DELETE FROM aoi');
-      for (let i = 0; i < parsedData.businesses.length; i++) {
-        console.log(parsedData.businesses[i].name);
-        placesSQL = new carto.source.SQL(`
-          INSERT INTO aoi (
-            name, rating, lon, lat, price, location, phone
-          ) VALUES (
-            ${parsedData.businesses[i].name},
-            ${parsedData.businesses[i].rating},
-            ${parsedData.businesses[i].coordinates.longitude},
-            ${parsedData.businesses[i].coordinates.latitude},
-            ${parsedData.businesses[i].price},
-            ${JSON.stringify(parsedData.businesses[i].location)},
-            ${parsedData.businesses[i].display_phone}
-          );`);
-      }
-    });
-
-    let cartoPlacesLayer = updateAoiDB.then(function() {
-      let placesDataset = new carto.source.SQL('SELECT * FROM aoi');
-      console.log('database selected');
-      let placesLayer = new carto.layer.Layer(placesDataset, placesStyle, {
-        featureOverColumns: ['name', 'lon', 'lat']
-      });
-
-      client.addLayers([placesLayer]);
-      client.getLeafletLayer().addTo(map);
-    });
-=======
-
-
+    
     // let places = $.ajax({
     //   method: 'GET',
     //   url: '/explore',
@@ -203,7 +154,6 @@ function startEm() {
     //   client.getLeafletLayer().addTo(map);
     // });
 
->>>>>>> 7ba95e7a8a746757c1cf2a5e3f0f87fc050f69bf
   });
   airports.on('featureOver', function(featureEvent) {
     popup.setLatLng(featureEvent.latLng);
