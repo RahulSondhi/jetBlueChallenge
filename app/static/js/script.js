@@ -113,7 +113,7 @@ function startEm() {
 
     $("#infoFill").html('This airport is called '+featureEvent.data.name+".");
 
-    
+
     // let places = $.ajax({
     //   method: 'GET',
     //   url: '/explore',
@@ -154,7 +154,20 @@ function startEm() {
     //   client.getLeafletLayer().addTo(map);
     // });
 
+    var possibleDest = [featureEvent.data.name];
+    var path = route[featureEvent.data.name];
+
+    for(var x = 0; x < path.length; x++){
+       var dest = path[x].city3;
+      if( ! (possibleDest.includes(dest)) ){
+        possibleDest.push(path[x].city3);
+      }
+    }
+    console.log(possibleDest);
+
+    
   });
+
   airports.on('featureOver', function(featureEvent) {
     popup.setLatLng(featureEvent.latLng);
     popup.setContent(`<h2>${featureEvent.data.name}</h2>`);
