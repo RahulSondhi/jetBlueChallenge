@@ -111,7 +111,21 @@ function startEm() {
 
   airports.on('featureClicked', function(featureEvent) {
 
-    $("#infoFill").html(`This airport is called ${featureEvent.data.name}.`);
+    let description = $.ajax({
+      method: 'GET',
+      url: '/airport-description',
+      data: {
+        code: featureEvent.data.name
+      }
+    });
+
+    description.then(function (descripData) {
+      console.log(data);
+      $("#infoFill").html(`This airport is called ${featureEvent.data.name}.
+        ${descripData}`);
+    })
+
+    //fetch("/airport-description", { })
 
     // let places = $.ajax({
     //   method: 'GET',

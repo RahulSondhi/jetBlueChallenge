@@ -170,7 +170,15 @@ def GetAirportDescription():
       database="jetBlue"
     )
     cursor = db.cursor();
-    mycursor.execute("SELECT * FROM Airports WHERE code={0}", code)
-    myresult = mycursor.fetchall()
-    for x in myresult:
-      print(x)
+    cursor.execute("SELECT * FROM Airports WHERE code='{0}'".format(code))
+    myresult = cursor.fetchall()
+    serializedData = {}
+    serializedData['Code'] = myresult[0][0]
+    serializedData['City'] = myresult[0][1]
+    serializedData['Name'] = myresult[0][2]
+    serializedData['StateCode'] = myresult[0][3]
+    serializedData['CountryCode'] = myresult[0][4]
+    serializedData['CountryName'] = myresult[0][5]
+    serializedData['IsBlueCity'] = myresult[0][6]
+    serializedData['IsPreClearedStation'] = myresult[0][7]
+    return json.dumps(serializedData)
