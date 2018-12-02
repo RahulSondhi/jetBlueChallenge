@@ -1,3 +1,27 @@
+var config = {
+  delimiter: "", // auto-detect
+  newline: "", // auto-detect
+  quoteChar: '"',
+  escapeChar: '"',
+  header: true,
+  trimHeaders: false,
+  dynamicTyping: false,
+  preview: 0,
+  encoding: "",
+  worker: false,
+  comments: false,
+  step: undefined,
+  complete: undefined,
+  error: undefined,
+  download: false,
+  skipEmptyLines: false,
+  chunk: undefined,
+  fastMode: undefined,
+  beforeFirstChunk: undefined,
+  withCredentials: undefined,
+  transform: undefined
+};
+
 $(function() {
 
   startEm()
@@ -6,17 +30,23 @@ $(function() {
 
 });
 
-var obj;
+var route;
 
 async function initSite() {
   $.ajax({
     type: "GET",
     cache: true,
-    url: "/static/data/cities.json",
+    url: "/static/data/routes.csv",
     success: async function(data) {
-      obj = data;
+      route = await initdata(data);
     }
   })
+}
+
+async function initdata(data){
+  var tempData = await Papa.parse(data, config);
+
+  return tempData;
 }
 
 function startEm() {
@@ -46,9 +76,7 @@ function startEm() {
   var airportStyle = new carto.style.CartoCSS(`
         #layer {
 		  marker-width: 60;
-		  marker-fill: #8409B2;
-		  marker-fill-opacity: 1;
-        marker-file: url('https://s3.amazonaws.com/com.cartodb.users-assets.production/production/rahulsondhi/assets/20181201232317airplane.svg');
+      marker-file: url('https://s3.amazonaws.com/com.cartodb.users-assets.production/production/rahulsondhi/assets/20181201232317airplane.svg');
 		  marker-allow-overlap: true;
 		  marker-line-width: 0;
 		  marker-line-color: #FFFFFF;
@@ -88,8 +116,10 @@ function startEm() {
   var popup = L.popup();
 
   airports.on('featureClicked', function(featureEvent) {
+
     $("#infoFill").html('This airport is called '+featureEvent.data.name+".");
 
+<<<<<<< HEAD
     let places = $.ajax({
       method: 'GET',
       url: '/explore',
@@ -130,6 +160,50 @@ function startEm() {
       client.addLayers([placesLayer]);
       client.getLeafletLayer().addTo(map);
     });
+=======
+
+
+    // let places = $.ajax({
+    //   method: 'GET',
+    //   url: '/explore',
+    //   data: {
+    //     lat: featureEvent.data.lat,
+    //     lon: featureEvent.data.lon,
+    //     isAccessible: false // TODO: This should be user set
+    //   }
+    // });
+    //
+    // let updateAoiDB = places.then(function(data) {
+    //   let parsedData = JSON.parse(data);
+    //   placesSQL = new carto.source.SQL('DELETE FROM aoi');
+    //   for (let i = 0; i < parsedData.businesses.length; i++) {
+    //     placesSQL = new carto.source.SQL(`
+    //       INSERT INTO aoi (
+    //         name, rating, lon, lat, price, location, phone
+    //       ) VALUES (
+    //         ${parsedData.businesses[i].name},
+    //         ${parsedData.businesses[i].rating},
+    //         ${parsedData.businesses[i].coordinates.longitude},
+    //         ${parsedData.businesses[i].coordinates.latitude},
+    //         ${parsedData.businesses[i].price},
+    //         ${JSON.stringify(parsedData.businesses[i].location)},
+    //         ${parsedData.businesses[i].display_phone}
+    //       );`);
+    //   }
+    // });
+    //
+    // let cartoPlacesLayer = updateAoiDB.then(function() {
+    //   let placesDataset = new carto.source.SQL('SELECT * FROM aoi');
+    //   console.log('database selected');
+    //   let placesLayer = new carto.layer.Layer(placesDataset, placesStyle, {
+    //     featureOverColumns: ['name', 'lon', 'lat']
+    //   });
+    //
+    //   client.addLayers([placesLayer]);
+    //   client.getLeafletLayer().addTo(map);
+    // });
+
+>>>>>>> 7ba95e7a8a746757c1cf2a5e3f0f87fc050f69bf
   });
   airports.on('featureOver', function(featureEvent) {
     popup.setLatLng(featureEvent.latLng);
@@ -140,70 +214,4 @@ function startEm() {
     popup.removeFrom(map);
   });
 
-  //
-  // // // 4.1 Defining a category dataview
-  // var wildfiresDataView = new carto.dataview.Category(wildfiresSQL, 'stat_cause_descr', {
-  //   limit: 14,
-  //   operation: carto.operation.count,
-  //   operationColumn: 'fire_size'
-  // });
-  //
-  // // 4.2 Listening to data changes on the dataview
-  // wildfiresDataView.on('dataChanged', function(newData) {
-  //   refreshWildfiresWidget(newData.categories);
-  //   categoryData = newData.categories;
-  // });
-  //
-  // colorDict = {
-  //   "Debris Burning": '#5F4690',
-  //   "Miscellaneous": '#1D6996',
-  //   "Arson": '#38A6A5',
-  //   "Lightning": '#0F8554',
-  //   "Missing/Undefined": '#73AF48',
-  //   "Equipment Use": '#EDAD08',
-  //   "Campfire": '#E17C05',
-  //   "Children": '#CC503E',
-  //   "Smoking": '#94346E',
-  //   "Railroad": ' #6F4070'
-  // }
-  //
-  // // Define how the Widget updates upon changes to the wildfiresDataView
-  // var refreshWildfiresWidget = function(data) {
-  //   // var $widget = document.querySelector('#fireCategoryWidget');
-  //   // var $wildfiresTypes = $widget.querySelector('.js-fires_cat');
-  //   //
-  //   // // Remove whatever was in the category widget beforehand
-  //   // while ($wildfiresTypes.firstChild) {
-  //   //   $wildfiresTypes.removeChild($wildfiresTypes.firstChild);
-  //   // }
-  //   // // iteratively add list elements
-  //   // if (data) {
-  //   //   for (var wildfiretype of data) {
-  //   //     var $li = document.createElement('li');
-  //   //     // Adding a tooltip/hover action
-  //   //     $li.className = 'tooltip';
-  //   //     $li.setAttribute("id", wildfiretype.name)
-  //   //     var x = document.createElement('span');
-  //   //     var t = document.createTextNode("Finding all " + wildfiretype.name.toLowerCase() + " fires");
-  //   //     x.className = 'tooltiptext';
-  //   //     x.appendChild(t); // Append the hover text to span object
-  //   //     $li.appendChild(x); // Append span object to the list object
-  //   //
-  //   //     // set colors of list element
-  //   //     if (colorDict[wildfiretype.name])
-  //   //       $li.style.color = colorDict[wildfiretype.name];
-  //   //     else {
-  //   //       $li.style.color = "black";
-  //   //     }
-  //   //
-  //   //     // Set the text of the list element as wildfire category name + the value (in this case, the count)
-  //   //     listText = document.createTextNode(wildfiretype.name + ': ' + wildfiretype.value);
-  //   //     $li.appendChild(listText);
-  //   //     $wildfiresTypes.appendChild($li);
-  //   //   }
-  //   // }
-  // }
-  //
-  // // // 4.3 Adding the dataview to the client
-  // client.addDataview(airportDataView);
 }

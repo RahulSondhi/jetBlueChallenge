@@ -150,3 +150,11 @@ def GetPlaceReviews():
         url = '{0}/{1}/reviews'.format(YELP_URL, reviewData['error']['new_business_id']);
         reviewData = requests.get(url, headers=yelpAuthHeader).json();
     return json.dumps(reviewData);
+
+@app.route("/startPage")
+def startEm2():
+    return render_template("startPage.html");
+
+@app.route("/start")
+def startEm3():
+    return render_template("start.html");
