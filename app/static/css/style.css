@@ -24,7 +24,7 @@ html {
 body {
     background: #f2f6f9;
     height: 100%;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 #container {
@@ -37,6 +37,10 @@ body {
     flex: 1;
     margin: 0px;
     z-index: 0;
+}
+
+#desc{
+    margin-left: 3%;
 }
 
 /* Tooltip container */
@@ -89,7 +93,21 @@ body {
     opacity: 1;
 }
 
+#descText {
+    font-size: 1.3rem;
+    font-family: 'Chakra Petch', sans-serif;
+    text-align: center;
+}
+
+#descText2 {
+    font-size: 1.0rem;
+    font-family: 'Chakra Petch', sans-serif;
+    text-align: center;
+}
+
 #info {
+/*    background-color: #B6B908;*/
+    background-color: rgba(39, 112, 82, 0.8);
     width: 30rem;
     margin: auto;
     top: 11rem;
@@ -113,7 +131,6 @@ body {
     margin-bottom: 2%;
     width: 100%;
     height: 19%;
-    background-color: azure;
     border-bottom-width: 2px;
     border-bottom-color: #fff;
     border-bottom-style: solid;
@@ -132,5 +149,5 @@ body {
 }
 
 #Peck {
-    margin-top: 10%;
+    margin-left: 20%;
 }

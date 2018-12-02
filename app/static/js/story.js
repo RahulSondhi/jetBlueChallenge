@@ -6,19 +6,19 @@
      var scene = 0;
      var clicks = 0;
      setTimeout(function () {
-         $('#story').prepend('<img id="dialogPopUpPF" src="assets/talkDialog.svg" height="300"/>');
+         $('#story').prepend('<img id="dialogPopUpPF" src="../static/assets/talkDialog.svg" height="300"/>');
      }, 1000);
      setTimeout(function () {
          $("div.mText").html("Hi! I'm Peck, a Kakapo Bird!");
          $("#pCharacter img:last-child").remove();
-         $('#pCharacter').prepend('<img src="assets/svg/emotions/happyB.svg" height="500">');
+         $('#pCharacter').prepend('<img src="../static/assets/svg/emotions/happyB.svg" height="500">');
          clicks++;
      }, 1400);
      $("#continueBTN3").click(function () {
          console.log("clicked");
          if (clicks == 1) {
              $("#pCharacter img:last-child").remove();
-             $('#pCharacter').prepend('<img src="assets/svg/emotions/sadB.svg" height="500">');
+             $('#pCharacter').prepend('<img src="../static/assets/svg/emotions/sadB.svg" height="500">');
              $("div.mText").html("The Kakapo Bird is flightless...<br> ...basically, I can't fly. <br>");
              oneHalf();
 
@@ -30,7 +30,7 @@
      $("#continueBTN3").click(function () {
          console.log("clicked");
          $("#pCharacter img:last-child").remove();
-         $('#pCharacter').prepend('<img src="assets/svg/emotions/lookUpB.svg" height="500">');
+         $('#pCharacter').prepend('<img src="../static/assets/svg/emotions/lookUpB.svg" height="500">');
          $("div.mText").html("<br> Ever since I've been little, my dream <br> has been to fly into the sky <br> and travel the world.");
          two();
      });
@@ -40,8 +40,8 @@
      $("#continueBTN3").click(function () {
          console.log("clicked");
          $("#pCharacter img:last-child").remove();
-         $('#pCharacter').prepend('<img src="assets/svg/emotions/lookUpB.svg" height="500">');
-         $('#plane1').prepend('<img src="assets/svg/plane.svg" height="100">');
+         $('#pCharacter').prepend('<img src="../static/assets/svg/emotions/lookUpB.svg" height="500">');
+         $('#plane1').prepend('<img src="../static/assets/svg/plane.svg" height="100">');
          $("div.mText").html("One day I looked up and realized <br> that even the sky <br> ...wouldn't be my limit...");
          threeHalf();
      });
@@ -55,7 +55,7 @@
          $("#plane1 img:last-child").remove();
          $("#plane1 img:last-child").remove();
          $("#plane1 img:last-child").remove();
-         $('#pCharacter').prepend('<img src="assets/svg/emotions/calmB.svg" height="500">');
+         $('#pCharacter').prepend('<img src="../static/assets/svg/emotions/calmB.svg" height="500">');
          $("div.mText").html("<br><br><br> ...");
          three();
      });
@@ -64,15 +64,15 @@
  function three() {
      $("#continueBTN3").click(function () {
          console.log("clicked");
+         $("#continueBTN3").remove();
          $("#pCharacter img:last-child").remove();
          $("#plane1 img:last-child").remove();
          $("#plane1 img:last-child").remove();
          $("#plane1 img:last-child").remove();
          $("#plane1 img:last-child").remove();
          $("#plane1 img:last-child").remove();
-         $('#plane2').prepend('<img src="assets/svg/bOnPlane.svg" height="300">');
+         $('#plane2').prepend('<img src="../static/assets/svg/bOnPlane.svg" height="300">');
          $("div.mText").html("So I decided to follow my dreams!<br><br>Come join me and discover <br>  how YOU may travel the world with <br> the power of JetBlue!");
-         
          goToMap();
      });
 
@@ -80,9 +80,8 @@
 
 
  function goToMap() {
-     $("#continueBTN3 img:last-child").remove();
       setTimeout(function () {
-         window.location = "index.html";
+         window.location = "/";
      }, 3000);
      
  }

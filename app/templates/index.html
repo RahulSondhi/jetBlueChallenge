@@ -1,60 +1,64 @@
 <html>
 
 <head>
-  <title>jetBlue</title>
-  <!--  -->
-  <link rel=apple-touch-icon sizes=180x180 href=/static/media/favicon/apple-touch-icon.png>
-  <link rel=icon type=image/png sizes=32x32 href=/static/media/favicon/favicon-32x32.png>
-  <link rel=icon type=image/png sizes=16x16 href=/static/media/favicon/favicon-16x16.png>
-  <link rel=mask-icon href=/static/media/favicon/safari-pinned-tab.svg color=#00205b>
-  <meta name=apple-mobile-web-app-title content=JetBlue>
-  <meta name=application-name content=JetBlue>
-  <meta name=msapplication-TileColor content=#00205b>
-  <meta name=theme-color content=#00205b>
-  <!-- Base -->
-  <script src='/static/js/jquery-3.3.1.min.js'></script>
-  <!-- Popper -->
-  <script src='/static/api/Popper/popper.js'></script>
-  <!-- Bootstrap -->
-  <link rel='stylesheet' href='/static/api/BootStrap/css/bootstrap.css'>
-  <link rel='stylesheet' href='/static/api/BootStrap/css/bootstrap.min.css'>
-  <script src='/static/api/BootStrap/js/bootstrap.js'></script>
-  <script src='/static/api/BootStrap/js/bootstrap.min.js'></script>
-  <!-- D3 -->
-  <script src='/static/api/D3/d3.js'></script>
-  <script src='/static/api/D3/d3.min.js'></script>
-  <!-- Numerical -->
-  <script src='/static/api/Numeric/numeric.js'></script>
-  <!-- Parser -->
-  <script src='/static/api/PapaParse/papaparse.js'></script>
-  <script src='/static/api/PapaParse/papaparse.min.js'></script>
-  <!-- Leaflet -->
-  <script src='/static/api/Leaflet/leaflet.js'></script>
-  <link rel='stylesheet' href='/static/api/Leaflet/leaflet.css'>
-  <!-- Carto -->
-  <script src='/static/js/carto.min.js'></script>
-  <!--  -->
-  <link rel='stylesheet' href='/static/css/style.css'>
+    <title>jetBlue</title>
+    <!--  -->
+    <link rel=apple-touch-icon sizes=180x180 href=/static/media/favicon/apple-touch-icon.png>
+    <link rel=icon type=image/png sizes=32x32 href=/static/media/favicon/favicon-32x32.png>
+    <link rel=icon type=image/png sizes=16x16 href=/static/media/favicon/favicon-16x16.png>
+    <link rel=mask-icon href=/static/media/favicon/safari-pinned-tab.svg color=#00205b>
+    <meta name=apple-mobile-web-app-title content=JetBlue>
+    <meta name=application-name content=JetBlue>
+    <meta name=msapplication-TileColor content=#00205b>
+    <meta name=theme-color content=#00205b>
+    <!-- Base -->
+    <script src='/static/js/jquery-3.3.1.min.js'></script>
+    <!-- Popper -->
+    <script src='/static/api/Popper/popper.js'></script>
+    <!-- Bootstrap -->
+    <link rel='stylesheet' href='/static/api/BootStrap/css/bootstrap.css'>
+    <link rel='stylesheet' href='/static/api/BootStrap/css/bootstrap.min.css'>
+    <script src='/static/api/BootStrap/js/bootstrap.js'></script>
+    <script src='/static/api/BootStrap/js/bootstrap.min.js'></script>
+    <!-- D3 -->
+    <script src='/static/api/D3/d3.js'></script>
+    <script src='/static/api/D3/d3.min.js'></script>
+    <!-- Numerical -->
+    <script src='/static/api/Numeric/numeric.js'></script>
+    <!-- Parser -->
+    <script src='/static/api/PapaParse/papaparse.js'></script>
+    <script src='/static/api/PapaParse/papaparse.min.js'></script>
+    <!-- Leaflet -->
+    <script src='/static/api/Leaflet/leaflet.js'></script>
+    <link rel='stylesheet' href='/static/api/Leaflet/leaflet.css'>
+    <!-- Carto -->
+    <script src='/static/js/carto.min.js'></script>
+    <!--  -->
+    <link rel='stylesheet' href='/static/css/style.css'>
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch" rel="stylesheet">
 </head>
 
 <body>
-  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-jetBlue">
-    <a class="navbar-brand" href="#">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-jetBlue">
+        <a class="navbar-brand" href="#">
       <img id="navLogo" src="/static/media/logo.svg" alt="">
     </a>
-  </nav>
-  <div id="container">
-    <div id="map"></div>
-    <div id="info">
-        <img id="Peck" src="../static/assets/SVG/bOnPlane.svg">
-      <div id="infoHeader"></div>
-      <div id="infoBody">
-        <h2>Description:</h2>
-        <div id="infoFill"></div>
-      </div>
+    </nav>
+    <div id="container">
+        <div id="map"></div>
+        <div id="info">
+            <p id="descText">Use this map to help me explore the world!<br> Airplane symbols indicate airport locations.</p>
+            <p id="descText2"></p>
+            <p id="descText2">Peck-a-destination to find out more!</p>
+            <img id="Peck" src="../static/assets/SVG/bOnPlane.svg" width="300">
+            <div id="infoHeader"></div>
+            <div id="infoBody">
+                <h2 id="desc" >Description:</h2>
+                <div id="infoFill"></div>
+            </div>
+        </div>
     </div>
-  </div>
-  <script src='/static/js/script.js'></script>
+    <script src='/static/js/script.js'></script>
 </body>
 
 </html>
